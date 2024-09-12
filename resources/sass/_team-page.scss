@@ -1,0 +1,32 @@
+.teams{
+    .card{
+        background-color: #FEFDFB;
+        border-color:$hover-color ;
+        .card-body{
+            img{
+                width: 40px;
+                height: 40px;
+                object-fit: cover;
+                border: 2px solid #C03628;
+                border-radius: 50%;
+            }
+            padding-bottom: 0;
+            .card-title{
+                font-weight: 500;
+                margin: 0;
+            }
+            .card-text{
+                font-weight: 400;
+                span{
+                    font-weight: 700;
+                    font-size: 14px;
+                }
+            }
+            .btn{
+                background-color: $hover-color;
+                border: none;
+            }
+    }
+
+}
+}

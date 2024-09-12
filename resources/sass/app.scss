@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$primary-color: #C03628;
+$secondary-color: #C03628;
+$background-color: #f6f5f7;
+$text-color: #333;
+$input-background: #eee;
+$footer-background: #222;
+$footer-link-color: #3c97bf;
+$anchor-color: #7c7a78;
+$hover-bg-color: #FFF0E5;
+$hover-color:#C03628;
+$white: #ffffff;
+// Fonts
+// @import url("https://fonts.bunny.net/css?family=Nunito");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+@import "auth";
+@import "dashboard";
+@import "modal-form";
+@import "team-page";
+body {
+    margin: 0;
+    font-family: "poppins", sans-serif;
+    a {
+        // color: #7c7a78;
+        i {
+            color: #817f7d;
+        }
+    }
+}

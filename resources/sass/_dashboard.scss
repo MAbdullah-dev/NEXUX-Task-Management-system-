@@ -1,0 +1,116 @@
+.page_wrapper {
+    width: 100%;
+    color: #FFF6F0;
+    .sidebar {
+        max-width: 312px;
+        width: 100%;
+        transition: 0.3s ease-in-out;
+        background-color: #FFF0E5;
+        &.active {
+            max-width: 80px;
+            .logo {
+                margin: 0 auto;
+                img {
+                    display: none;
+                }
+                i {
+                    font-size: 22px;
+                }
+            }
+            .links {
+                ul {
+                    li {
+                        a {
+                            i {
+                                font-size: 16px;
+
+                            }
+                            span {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .footer {
+                .nav-item {
+                    .nav-link {
+                        i {
+                            font-size: 16px;
+                        }
+                        span {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .logo {
+            img {
+                width: 100%;
+                max-width: 80px;
+            }
+            i {
+                font-size: 20px;
+                cursor: pointer;
+            }
+        }
+        .links {
+            .nav-link {
+                &:hover {
+                    background-color: #FFF0E5;
+                    color: #DD4C3F;
+                    transition: 0.3s ease-in-out;
+                    i{
+                        color: #DD4C3F;
+                    }
+                }
+                span{
+                    color: $anchor-color;
+                }
+            }
+        }
+    }
+    header {
+        h1{
+            color: #DD4C3F;
+        }
+        .nav-item {
+            .nav-link {
+                cursor: pointer;
+                &.active {
+                    border-bottom: 3px solid #DD4C3F;
+                }
+                span {
+                    font-size: 14px;
+                    color: $anchor-color;
+                }
+            }
+        }
+        .dropdown-toggle::after {
+            color: $anchor-color;
+        }
+        .dropdown-menu {
+            background-color: #f1eeeb00 !important;
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                color:$anchor-color;
+                &:hover {
+                    background-color: #FFF0E5;
+                    color: #DD4C3F;
+                    i{
+                    color: #DD4C3F;
+
+                    }
+                }
+            }
+        }
+    }
+    main{
+        width: 100%;
+        height: calc(100vh - 173.06px);
+        background-color: #fff8f478;
+    }
+}

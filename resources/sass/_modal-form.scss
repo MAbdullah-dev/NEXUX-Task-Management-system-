@@ -1,0 +1,24 @@
+form{
+    align-items:unset;
+    text-align: unset;
+    .form-control{
+        &:focus{
+           box-shadow: 0 0 0 0;
+           border: var(--bs-border-width) solid var(--bs-border-color);
+        }
+    }
+    .btn{
+        background-color: $hover-color;
+        outline: none;
+        border: none;
+        &:active, &:focus, &:hover, &:visited, &:link, &:active:focus,&:focus-visible{
+        background-color: $hover-color;
+
+        }
+    }
+}
+// .create_team{
+    .modal-dialog{
+        max-width: max-content;
+    }
+// }

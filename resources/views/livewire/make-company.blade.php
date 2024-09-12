@@ -1,0 +1,88 @@
+<div class="make_team d-flex align-items-center">
+    <div class="container mt-5">
+        <div class="form-container">
+            <!-- Centered Heading -->
+            <div class="text-center ">
+                <h2>Manage Your Business with Us</h2>
+                <p class="font-weight-bold">Fill out the form below to get started with creating and managing your business.</p>
+            </div>
+
+            <form wire:submit.prevent="createCompany">
+                <div class="row">
+                    <!-- Name -->
+                    <div class="mb-3 col-md-6">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" wire:model.defer="name" class="form-control" placeholder="Enter your name">
+                        @error('name') <span class="text-danger">{{ $message }}</span> @enderror
+                    </div>
+
+                    <!-- Email -->
+                    <div class="mb-3 col-md-6">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" wire:model.defer="email" class="form-control" placeholder="Enter your email">
+                        @error('email') <span class="text-danger">{{ $message }}</span> @enderror
+                    </div>
+
+                    <!-- Password -->
+                    <div class="mb-3 col-md-6">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" id="password" wire:model.defer="password" class="form-control" placeholder="Enter your password">
+                        @error('password') <span class="text-danger">{{ $message }}</span> @enderror
+                    </div>
+
+                    <!-- Password Confirmation -->
+                    <div class="mb-3 col-md-6">
+                        <label for="password_confirmation" class="form-label">Confirm Password</label>
+                        <input type="password" id="password_confirmation" wire:model.defer="password_confirmation" class="form-control" placeholder="Confirm your password">
+                        @error('password_confirmation') <span class="text-danger">{{ $message }}</span> @enderror
+                    </div>
+
+                    <!-- Type -->
+                    <div class="mb-3 col-md-6">
+                        <label for="type" class="form-label">Type</label>
+                        <select id="type" wire:model.defer="type" class="form-select">
+                            <option value="">Select type</option>
+                            @foreach($types as $type)
+                                <option value="{{ $type }}">{{ ucfirst($type) }}</option>
+                            @endforeach
+                        </select>
+                        @error('type') <span class="text-danger">{{ $message }}</span> @enderror
+                    </div>
+
+                    <!-- Members -->
+                    <div class="mb-3 col-md-6">
+                        <label for="members" class="form-label">Members</label>
+                        <input type="number" id="members" wire:model.defer="members" class="form-control" placeholder="Enter number of members">
+                        @error('members') <span class="text-danger">{{ $message }}</span> @enderror
+                    </div>
+
+                    <!-- Country -->
+                    <div class="mb-3 col-md-6">
+                        <label for="country" class="form-label">Country</label>
+                        <input type="text" id="country" wire:model.defer="country" class="form-control" placeholder="Enter your country">
+                        @error('country') <span class="text-danger">{{ $message }}</span> @enderror
+                    </div>
+
+                    <!-- Company Name -->
+                    <div class="mb-3 col-md-6">
+                        <label for="company_name" class="form-label">Company Name</label>
+                        <input type="text" id="company_name" wire:model.defer="company_name" class="form-control" placeholder="Enter your company name">
+                        @error('company_name') <span class="text-danger">{{ $message }}</span> @enderror
+                    </div>
+
+                    <!-- Description -->
+                    <div class="mb-3 col-md-12">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea id="description" wire:model.defer="description" class="form-control" rows="3" placeholder="Enter a description"></textarea>
+                        @error('description') <span class="text-danger">{{ $message }}</span> @enderror
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
