@@ -2,9 +2,9 @@
     <div class="container mt-5">
         <div class="form-container">
             <!-- Centered Heading -->
-            <div class="text-center ">
+            <div class="text-center mt-5">
                 <h2>Manage Your Business with Us</h2>
-                <p class="font-weight-bold">Fill out the form below to get started with creating and managing your business.</p>
+                <p class="fw-light">Fill out the form below to get started with creating and managing your business.</p>
             </div>
 
             <form wire:submit.prevent="createCompany">
@@ -78,7 +78,7 @@
                     </div>
 
                     <!-- Submit Button -->
-                    <div class="col-12 text-center">
+                    <div class="col-12 d-flex align-items-center justify-content-end mb-2">
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </div>
