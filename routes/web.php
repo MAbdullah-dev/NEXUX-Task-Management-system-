@@ -8,11 +8,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/login', AuthComponent::class);
 Route::get('/login-company', MakeCompany::class)->name('login-company');
-// Route::middleware('auth')->group(function () {
+
+Route::middleware('auth')->group(function () {
 
     Route::get('/', UserDashboard::class)->name('dashboard');
     Route::get('/teams',Teams::class)->name('teams');
 
+});
     // Route::get('/login',AuthComponent::class);
-// });
 

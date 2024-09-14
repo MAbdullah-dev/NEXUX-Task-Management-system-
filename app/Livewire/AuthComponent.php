@@ -19,20 +19,17 @@ class AuthComponent extends Component
     public $signinemail;
     public $signinpassword;
     public $password_confirmation;
-    public $role_id;
-    public $roles;
     public bool $signedup = false;
 
-    public function mount() {
-        $this->roles = Role::all();
-    }
+    // public function mount() {
+    //     $this->roles = Role::all();
+    // }
 
     protected $rulesRegister = [
         'name' => 'required|string|max:255',
         'email' => 'required|email|unique:users,email',
         'password' => 'required|confirmed|min:8',
         'password_confirmation' => 'required|min:8',
-        'role_id' => 'required|exists:roles,id',
     ];
 
     protected $rulesLogin = [
@@ -48,7 +45,7 @@ class AuthComponent extends Component
             'name' => $this->name,
             'email' => $this->email,
             'password' => Hash::make($this->password),
-            'role_id' => $this->role_id,
+            'role_id' => 4,
         ]);
         if ($user != null) {
             $this->signedup = !$this->signedup;
