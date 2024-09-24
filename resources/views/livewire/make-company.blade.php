@@ -53,7 +53,13 @@
                     <!-- Country -->
                     <div class="mb-3 col-md-6">
                         <label for="country" class="form-label">Country</label>
-                        <input type="text" id="country" wire:model.defer="country" class="form-control" placeholder="Enter your country">
+                        <select id="type" wire:model.defer="country" class="form-select">
+                            <option value="">Select type</option>
+                            @foreach($countries as $country)
+                            <option value="{{ $country\ }}">{{ ucfirst($country\) }}</option>
+                            @endforeach
+                        </select>
+                        {{-- <input type="text" id="country" wire:model.defer="country" class="form-control" placeholder="Enter your country"> --}}
                         @error('country') <span class="text-danger">{{ $message }}</span> @enderror
                     </div>
 
