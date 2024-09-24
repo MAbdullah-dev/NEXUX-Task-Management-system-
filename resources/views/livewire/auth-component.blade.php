@@ -28,15 +28,6 @@
                     @error('password_confirmation')
                         <span class="text-danger fs-6">{{ $message }}</span>
                     @enderror
-                    <select id="role" wire:model="role_id" class="form-control">
-                        <option value="">Select Role</option>
-                        @foreach ($roles as $role)
-                            <option value="{{ $role->id }}">{{ $role->role }}</option>
-                        @endforeach
-                    </select>
-                    @error('role_id')
-                        <span class="text-danger fs-6">{{ $message }}</span>
-                    @enderror
                     <button type="submit" class="mt-2">Sign Up</button>
                 </form>
             </div>
