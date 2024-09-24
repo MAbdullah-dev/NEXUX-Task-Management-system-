@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\Countries;
 use Illuminate\Validation\Rule;
 use Livewire\Component;
 use App\Models\Make_company;
@@ -20,7 +21,13 @@ class MakeCompany extends Component
     public $country;
     public $company_name;
 
+    public $counteries;
+
     public $types = ['small', 'medium', 'large'];
+
+    public function mount(){
+        $this->counteries = Countries::all();
+    }
 
      protected $rules = [
         'name' => 'required|string|max:255',

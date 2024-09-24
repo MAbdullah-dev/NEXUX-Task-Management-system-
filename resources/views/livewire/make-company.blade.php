@@ -1,9 +1,16 @@
 <div class="make_team d-flex align-items-center">
-    <div class="container mt-5">
+    <img class="doodle doodle-1" src="{{ asset('images/doodle-arrow-1.png') }}" alt="">
+    <img class="doodle doodle-2" src="{{ asset('images/doodle-arrow-2.png') }}" alt="">
+    <img class="doodle doodle-3" src="{{ asset('images/doodle-bulb.png') }}" alt="">
+    <img class="doodle doodle-4" src="{{ asset('images/doodle-bulb.png') }}" alt="">
+    <div class="container mt-5 py-5">
         <div class="form-container">
             <!-- Centered Heading -->
-            <div class="text-center mt-5">
-                <h2>Manage Your Business with Us</h2>
+            <div class="text-center mt-5 ">
+                <div class="d-flex align-items-center justify-content-center">
+                    <img src="{{ asset('images/logo.gif') }}" alt="">
+                    <h2 class="text-decoration-underline">Manage Your Business with Us</h2>
+                </div>
                 <p class="fw-light">Fill out the form below to get started with creating and managing your business.</p>
             </div>
 
@@ -23,19 +30,6 @@
                         @error('email') <span class="text-danger">{{ $message }}</span> @enderror
                     </div>
 
-                    <!-- Password -->
-                    <div class="mb-3 col-md-6">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" id="password" wire:model.defer="password" class="form-control" placeholder="Enter your password">
-                        @error('password') <span class="text-danger">{{ $message }}</span> @enderror
-                    </div>
-
-                    <!-- Password Confirmation -->
-                    <div class="mb-3 col-md-6">
-                        <label for="password_confirmation" class="form-label">Confirm Password</label>
-                        <input type="password" id="password_confirmation" wire:model.defer="password_confirmation" class="form-control" placeholder="Confirm your password">
-                        @error('password_confirmation') <span class="text-danger">{{ $message }}</span> @enderror
-                    </div>
 
                     <!-- Type -->
                     <div class="mb-3 col-md-6">
@@ -43,7 +37,7 @@
                         <select id="type" wire:model.defer="type" class="form-select">
                             <option value="">Select type</option>
                             @foreach($types as $type)
-                                <option value="{{ $type }}">{{ ucfirst($type) }}</option>
+                            <option value="{{ $type }}">{{ ucfirst($type) }}</option>
                             @endforeach
                         </select>
                         @error('type') <span class="text-danger">{{ $message }}</span> @enderror
@@ -70,6 +64,19 @@
                         @error('company_name') <span class="text-danger">{{ $message }}</span> @enderror
                     </div>
 
+                    <!-- Password -->
+                    <div class="mb-3 col-md-6">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" id="password" wire:model.defer="password" class="form-control" placeholder="Enter your password">
+                        @error('password') <span class="text-danger">{{ $message }}</span> @enderror
+                    </div>
+
+                    <!-- Password Confirmation -->
+                    <div class="mb-3 col-md-6">
+                        <label for="password_confirmation" class="form-label">Confirm Password</label>
+                        <input type="password" id="password_confirmation" wire:model.defer="password_confirmation" class="form-control" placeholder="Confirm your password">
+                        @error('password_confirmation') <span class="text-danger">{{ $message }}</span> @enderror
+                    </div>
                     <!-- Description -->
                     <div class="mb-3 col-md-12">
                         <label for="description" class="form-label">Description</label>
