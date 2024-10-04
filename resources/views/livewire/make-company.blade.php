@@ -53,13 +53,14 @@
                     <!-- Country -->
                     <div class="mb-3 col-md-6">
                         <label for="country" class="form-label">Country</label>
-                        <select id="type" wire:model.defer="country" class="form-select">
-                            <option value="">Select type</option>
+                        <select id="type" wire:model.defer="country" class="form-select selectpicker" data-live-search="true">
+                            <option value="">Select country</option>
                             @foreach($countries as $country)
-                            <option value="{{ $country\ }}">{{ ucfirst($country\) }}</option>
+                                <option data-content="<img src='{{ country_flag($country->code) }}' width='20' class='me-2'>{{ ucfirst($country->name) }}" value="{{ $country->code }}">
+                                    {{ ucfirst($country->name) }}
+                                </option>
                             @endforeach
                         </select>
-                        {{-- <input type="text" id="country" wire:model.defer="country" class="form-control" placeholder="Enter your country"> --}}
                         @error('country') <span class="text-danger">{{ $message }}</span> @enderror
                     </div>
 

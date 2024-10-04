@@ -21,12 +21,12 @@ class MakeCompany extends Component
     public $country;
     public $company_name;
 
-    public $counteries;
+    public $countries;
 
     public $types = ['small', 'medium', 'large'];
 
     public function mount(){
-        $this->counteries = Countries::all();
+        $this->countries = Countries::all();
     }
 
      protected $rules = [
